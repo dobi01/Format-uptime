@@ -1,0 +1,27 @@
+{
+  "name": "learning-unit-tests",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha index.test.js",
+    "test:watch": "onchange \"./*.js\" -- npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dobi01/Learning-unit-tests.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dobi01/Learning-unit-tests/issues"
+  },
+  "homepage": "https://github.com/dobi01/Learning-unit-tests#readme",
+  "devDependencies": {
+    "mocha": "^5.1.0",
+    "onchange": "^3.3.0"
+  },
+  "dependencies": {
+  }
+}
