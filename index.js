@@ -12,24 +12,15 @@ const formatDate = (timeInSeconds) => {
 		seconds = seconds % 60; 
 		minutes = minutes % 60;
 
-		switch (true) {
-			case seconds == 0 && minutes == 0:
-				return `${hours} h`;
-			case minutes == 0:
-				return `${hours} h ${seconds} s`;
-			case seconds == 0:
-				return `${hours} h ${minutes} m`;
+		if (seconds == 0 && minutes == 0) {
+			return `${hours} h`;
+
+		} else if (minutes == 0) {
+			return `${hours} h ${seconds} s`;
+
+		} else if (seconds == 0) {
+			return `${hours} h ${minutes} m`;
 		}
-
-		// if (seconds == 0 && minutes == 0) {
-		// 	return `${hours} h`;
-
-		// } else if (minutes == 0) {
-		// 	return `${hours} h ${seconds} s`;
-
-		// } else if (seconds == 0) {
-		// 	return `${hours} h ${minutes} m`;
-		// }
 
 		return `${hours} h ${minutes} m ${seconds} s`;
 
